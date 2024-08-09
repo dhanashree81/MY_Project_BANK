@@ -1,0 +1,38 @@
+
+<div class="container w-70">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">AccNo</th>
+          <th scope="col" colspan="2">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+       <tr *ngFor="let i of accounts">
+          <th scope="row">{{i.id}}</th>
+          <td>{{i.name}}</td>
+          <td>{{i.accno}}</td>
+          <td> <a class="btn btn-primary" [routerLink]="['/accounts/edit', i.id]">Edit</a></td>
+          <td> <a class="btn btn-danger" (click)="deleteAccount(i.id)">Delete</a></td>
+       </tr>
+      </tbody>
+    </table>
+  </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
